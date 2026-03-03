@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "662739540154",
+    "project_id": "agendly-71771",
+    "storage_bucket": "agendly-71771.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:662739540154:android:76c790ebf3242ca6718a83",
+        "android_client_info": {
+          "package_name": "com.agendly.agendly_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCRvKAKVv4qXOIrlVxI7ebzVH5zUGb1b_s"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

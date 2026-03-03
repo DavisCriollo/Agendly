@@ -1,0 +1,28 @@
+
+services:
+  agendly-mongodb:
+    image: mongo:7
+    container_name: agendly-mongodb
+    ports:
+      - "27018:27017"
+    volumes:
+      - ./mongodb_data:/data/db
+    environment:
+      - MONGO_INITDB_DATABASE=agendlybd
+
+  back:
+    image: node:18-alpine
+    container_name: back-server
+    working_dir: /usr/src/app
+    ports:
+      - "3000:3000"
+    volumes:
+      - .:/usr/src/app
+      - /usr/src/app/node_modules
+      - ./uploads:/usr/src/app/uploads
+    environment:
+      - PORT=3000
+      - MONGO_URL=mongodb://agendly-mongodb:27017/agendlybd
+    command: sh -c "npm install && npm run dev"
+    depends_on:
+      - agendly-mongodb
