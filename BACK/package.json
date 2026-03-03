@@ -4,7 +4,7 @@
   "description": "ZenSchedule SaaS Backend - Node.js TypeScript",
   "main": "dist/server.js",
   "scripts": {
-    "build": "tsc",
+    "build": "npm install --include=dev && tsc",
     "dev": "ts-node-dev --respawn --transpile-only src/presentation/server.ts",
     "start": "node dist/presentation/server.js",
     "seed": "ts-node src/infrastructure/seeds/seed.ts",
